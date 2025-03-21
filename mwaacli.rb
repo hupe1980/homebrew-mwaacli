@@ -5,13 +5,13 @@
 class Mwaacli < Formula
   desc "mwaacli is a CLI for interacting with MWAA"
   homepage "https://github.com/hupe1980/mwaacli"
-  version "0.0.8"
+  version "0.0.9"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/hupe1980/mwaacli/releases/download/v0.0.8/mwaacli_Darwin_x86_64.tar.gz"
-      sha256 "ab8fff9a283e527212cb0d0c1d9a36a1e85d148111c148f6661b636014c9060f"
+      url "https://github.com/hupe1980/mwaacli/releases/download/v0.0.9/mwaacli_Darwin_x86_64.tar.gz"
+      sha256 "004d1b6872545e49142498ced473faaf5feb88480998477712eb1f4fd7caf14b"
 
       def install
         bin.install "mwaacli"
@@ -21,8 +21,8 @@ class Mwaacli < Formula
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/hupe1980/mwaacli/releases/download/v0.0.8/mwaacli_Darwin_arm64.tar.gz"
-      sha256 "2872e1a82a90b5bdfbf0d1444462d9ab6cd8ce4b0fee906c1095f66a4b260694"
+      url "https://github.com/hupe1980/mwaacli/releases/download/v0.0.9/mwaacli_Darwin_arm64.tar.gz"
+      sha256 "5e349e3389ca388e946a22ee0bbc081132ed173a5fa81eae7846dd680a523fdb"
 
       def install
         bin.install "mwaacli"
@@ -36,8 +36,8 @@ class Mwaacli < Formula
   on_linux do
     if Hardware::CPU.intel?
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/hupe1980/mwaacli/releases/download/v0.0.8/mwaacli_Linux_x86_64.tar.gz"
-        sha256 "073b2c4fa55b8766e0560a7014ecb993bc2fe8e68e58bab2ab49fd2a1961ed34"
+        url "https://github.com/hupe1980/mwaacli/releases/download/v0.0.9/mwaacli_Linux_x86_64.tar.gz"
+        sha256 "25caa3426c14c72589e28e6fd2c4e1edb2a0dd85728e0ff37c9755fb68ccfc68"
 
         def install
           bin.install "mwaacli"
@@ -49,8 +49,8 @@ class Mwaacli < Formula
     end
     if Hardware::CPU.arm?
       if !Hardware::CPU.is_64_bit?
-        url "https://github.com/hupe1980/mwaacli/releases/download/v0.0.8/mwaacli_Linux_armv6.tar.gz"
-        sha256 "2c639a98ee433e8da19e66fbeea1a363f5226c0921e1d48acb66616be4bc5204"
+        url "https://github.com/hupe1980/mwaacli/releases/download/v0.0.9/mwaacli_Linux_armv6.tar.gz"
+        sha256 "ddad0dd9e001b5438436591c295b9a5bffae9c4c516fc7257c56a3d3c001ccdf"
 
         def install
           bin.install "mwaacli"
@@ -62,8 +62,8 @@ class Mwaacli < Formula
     end
     if Hardware::CPU.arm?
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/hupe1980/mwaacli/releases/download/v0.0.8/mwaacli_Linux_arm64.tar.gz"
-        sha256 "bdbe6890cd6cfa45de8a04a0d5ec639913a987bba5b2abaf8ba9e2dde1105f5e"
+        url "https://github.com/hupe1980/mwaacli/releases/download/v0.0.9/mwaacli_Linux_arm64.tar.gz"
+        sha256 "395441be7081de7220c7e25a41b9915b1d3a7bbc78fbbd6e6fd6a6eed41ed421"
 
         def install
           bin.install "mwaacli"
