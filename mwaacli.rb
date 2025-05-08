@@ -5,13 +5,13 @@
 class Mwaacli < Formula
   desc "mwaacli is a CLI for interacting with MWAA"
   homepage "https://github.com/hupe1980/mwaacli"
-  version "0.0.23"
+  version "0.0.24"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/hupe1980/mwaacli/releases/download/v0.0.23/mwaacli_Darwin_x86_64.tar.gz"
-      sha256 "9c7dddae5022eb251263007062636b5880fe0d56162658cb09aeb51618afd41d"
+      url "https://github.com/hupe1980/mwaacli/releases/download/v0.0.24/mwaacli_Darwin_x86_64.tar.gz"
+      sha256 "0f081046d497bbf6fb357c9a69cfcd22638bb5ddfac44ac3b122db6c254dd2de"
 
       def install
         bin.install "mwaacli"
@@ -21,8 +21,8 @@ class Mwaacli < Formula
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/hupe1980/mwaacli/releases/download/v0.0.23/mwaacli_Darwin_arm64.tar.gz"
-      sha256 "87077966c73f1a24c426c107aaeece48602362a7d5b29b0294ff3bdf66e43f69"
+      url "https://github.com/hupe1980/mwaacli/releases/download/v0.0.24/mwaacli_Darwin_arm64.tar.gz"
+      sha256 "a6dfeef3b789169cb6fd69a36989f8beefcaad68409ffb446a0f5d80171e35e6"
 
       def install
         bin.install "mwaacli"
@@ -34,43 +34,34 @@ class Mwaacli < Formula
   end
 
   on_linux do
-    if Hardware::CPU.intel?
-      if Hardware::CPU.is_64_bit?
-        url "https://github.com/hupe1980/mwaacli/releases/download/v0.0.23/mwaacli_Linux_x86_64.tar.gz"
-        sha256 "13abadeae287f608a69c08d4183783344b00ddac2d11162cb71f79a9519704a1"
-
-        def install
-          bin.install "mwaacli"
-          bash_completion.install "completions/mwaacli.bash" => "mwaacli"
-          zsh_completion.install "completions/mwaacli.zsh" => "_mwaacli"
-          fish_completion.install "completions/mwaacli.fish"
-        end
+    if Hardware::CPU.intel? and Hardware::CPU.is_64_bit?
+      url "https://github.com/hupe1980/mwaacli/releases/download/v0.0.24/mwaacli_Linux_x86_64.tar.gz"
+      sha256 "9b9fe55075468a6b0e0f8b78d74840a0cd44026100f47e2242dd802068a09c65"
+      def install
+        bin.install "mwaacli"
+        bash_completion.install "completions/mwaacli.bash" => "mwaacli"
+        zsh_completion.install "completions/mwaacli.zsh" => "_mwaacli"
+        fish_completion.install "completions/mwaacli.fish"
       end
     end
-    if Hardware::CPU.arm?
-      if !Hardware::CPU.is_64_bit?
-        url "https://github.com/hupe1980/mwaacli/releases/download/v0.0.23/mwaacli_Linux_armv6.tar.gz"
-        sha256 "c8519c3833c202ccaab6b1faf6e913d4a24725fa8b9fe66cab85cd5ad5a9c6eb"
-
-        def install
-          bin.install "mwaacli"
-          bash_completion.install "completions/mwaacli.bash" => "mwaacli"
-          zsh_completion.install "completions/mwaacli.zsh" => "_mwaacli"
-          fish_completion.install "completions/mwaacli.fish"
-        end
+    if Hardware::CPU.arm? and !Hardware::CPU.is_64_bit?
+      url "https://github.com/hupe1980/mwaacli/releases/download/v0.0.24/mwaacli_Linux_armv6.tar.gz"
+      sha256 "3f56a3a309618e3a4ab3f38d8d4c3be3c8a3a05e9d2633dc26789b2ea7c3f565"
+      def install
+        bin.install "mwaacli"
+        bash_completion.install "completions/mwaacli.bash" => "mwaacli"
+        zsh_completion.install "completions/mwaacli.zsh" => "_mwaacli"
+        fish_completion.install "completions/mwaacli.fish"
       end
     end
-    if Hardware::CPU.arm?
-      if Hardware::CPU.is_64_bit?
-        url "https://github.com/hupe1980/mwaacli/releases/download/v0.0.23/mwaacli_Linux_arm64.tar.gz"
-        sha256 "3332d4d577c99e78f7b0284a788a1a951bdb344200436daef4d4b31ba444500b"
-
-        def install
-          bin.install "mwaacli"
-          bash_completion.install "completions/mwaacli.bash" => "mwaacli"
-          zsh_completion.install "completions/mwaacli.zsh" => "_mwaacli"
-          fish_completion.install "completions/mwaacli.fish"
-        end
+    if Hardware::CPU.arm? and Hardware::CPU.is_64_bit?
+      url "https://github.com/hupe1980/mwaacli/releases/download/v0.0.24/mwaacli_Linux_arm64.tar.gz"
+      sha256 "e9c1d00787f6f2b4bc6edf4bffe72719f8e1996a95ec75c52eb215448d0c0c0f"
+      def install
+        bin.install "mwaacli"
+        bash_completion.install "completions/mwaacli.bash" => "mwaacli"
+        zsh_completion.install "completions/mwaacli.zsh" => "_mwaacli"
+        fish_completion.install "completions/mwaacli.fish"
       end
     end
   end
